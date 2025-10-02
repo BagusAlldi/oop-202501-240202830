@@ -118,7 +118,7 @@ public class HelloFunctional {
 ## Hasil Eksekusi
 ![Tampilan Prosedural](Screenshots/heloProsedural.png)
 ![Tampilan OOP](Screenshots/heloOOP.png)
-![Tampilan Funcional](Screenshots/heloFuncional.png)
+![Tampilan Funcional](praktikum/week1-setup-hello-pos/screenshots/heloFuncional.png)
 ---
 
 ## Analisis
