@@ -116,8 +116,9 @@ public class HelloFunctional {
 ---
 
 ## Hasil Eksekusi
-![Tampilan Login](Screenshot/login.png)
-
+![Tampilan Prosedural](Screenshots/heloProsedural.png)
+![Tampilan OOP](Screenshots/heloOOP.png)
+![Tampilan Funcional](Screenshots/heloFuncional.png)
 ---
 
 ## Analisis
