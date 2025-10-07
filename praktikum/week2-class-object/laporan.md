@@ -143,9 +143,9 @@ public class MainProduk {
 ---
 
 ## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
-)
+![Tampilan Awal](Screenshot/Class&Object.png)
+Gambar di atas menunjukkan hasil eksekusi code di atas.
+
 ---
 
 ## Analisis
