@@ -48,7 +48,8 @@ Topik:  Class dan Object (Produk Pertanian)
 
 ## Kode Program
 
-```Produk
+Produk
+```
 package com.upb.agripos.model;
 
 public class Produk {
@@ -101,7 +102,9 @@ public class Produk {
     }
 }
 
-```CreditBy
+```
+CreditBy
+```
 package com.upb.agripos.util;
 public class CreditBy {
     public static void print(String nim, String nama) {
@@ -114,7 +117,9 @@ package com.upb.agripos;
 
 import com.upb.agripos.model.Produk;
 import com.upb.agripos.util.CreditBy;
-
+```
+MainProduk
+```
 public class MainProduk {
     public static void main(String[] args) {
         Produk p1 = new Produk("BNH-001", "Benih Padi IR64", 25000, 100);
@@ -134,6 +139,7 @@ public class MainProduk {
         CreditBy.print("240202830", "Bagus Alldiansyah");
     }
 }
+```
 ---
 
 ## Hasil Eksekusi
