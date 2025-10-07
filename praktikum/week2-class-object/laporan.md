@@ -143,8 +143,7 @@ public class MainProduk {
 ---
 
 ## Hasil Eksekusi
-![Tampilan Awal](praktikum/week2-class-object
-/Screenshot/Class&Object.png)
+![Tampilan Awal](/Screenshot/Class&Object.png)
 Gambar di atas menunjukkan hasil eksekusi code di atas.
 
 ---
