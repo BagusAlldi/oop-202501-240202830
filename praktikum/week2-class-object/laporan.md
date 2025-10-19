@@ -143,8 +143,8 @@ public class MainProduk {
 ---
 
 ## Hasil Eksekusi
-![Tampilan Awal](/Screenshot/Class&Object.png)
-Gambar di atas menunjukkan hasil eksekusi code di atas.
+<img width="1313" height="926" alt="Class Object" src="https://github.com/user-attachments/assets/fcb1e44a-59f0-4a96-9d46-9680a8dd75e9" />
+
 
 ---
 
