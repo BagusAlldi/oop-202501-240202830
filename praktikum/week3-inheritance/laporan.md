@@ -136,7 +136,8 @@ public class MainInheritance {
 ---
 
 ## Hasil Eksekusi
-exsample.png
+<img width="555" height="856" alt="Cuplikan layar 2025-10-19 205055" src="https://github.com/user-attachments/assets/572269c7-e1ba-4ce9-b22d-7b13bc39f94a" />
+
 
 ---
 
