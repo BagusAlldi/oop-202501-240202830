@@ -1,33 +1,44 @@
 # Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+Topik: Polymorphism (Info Produk)
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : Bagus Alldiansyah
+- NIM   : 2420202830
+- Kelas : 3 IKRA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
-
+- **menjelaskan konsep polymorphism** dalam OOP.  
+- **membedakan method overloading dan overriding**.  
+- **mengimplementasikan polymorphism (overriding, overloading, dynamic binding)** dalam program.  
+- **menganalisis contoh kasus polymorphism** pada sistem nyata (Agri-POS).  
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+Polymorphism berarti “banyak bentuk” dan memungkinkan objek yang berbeda merespons panggilan method yang sama dengan cara yang berbeda.  
+1. **Overloading** → mendefinisikan method dengan nama sama tetapi parameter berbeda.  
+2. **Overriding** → subclass mengganti implementasi method dari superclass.  
+3. **Dynamic Binding** → pemanggilan method ditentukan saat runtime, bukan compile time.  
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+1. **Overloading**  
+   - Tambahkan method `tambahStok(int jumlah)` dan `tambahStok(double jumlah)` pada class `Produk`.  
+2. **Overriding**  
+   - Tambahkan method `getInfo()` pada superclass `Produk`.  
+   - Override method `getInfo()` pada subclass `Benih`, `Pupuk`, dan `AlatPertanian`.  
+3. **Dynamic Binding**  
+   - Buat array `Produk[] daftarProduk` yang berisi objek `Benih`, `Pupuk`, dan `AlatPertanian`.  
+   - Loop array tersebut dan panggil `getInfo()`. Perhatikan bagaimana Java memanggil method sesuai jenis objek aktual.  
+4. **Main Class**  
+   - Buat `MainPolymorphism.java` untuk mendemonstrasikan overloading, overriding, dan dynamic binding.  
+5. **CreditBy**  
+   - Tetap panggil `CreditBy.print("<NIM>", "<Nama>")`.  
+6. **Commit dan Push**  
+   - Commit dengan pesan: `week4-polymorphism`.  
+
 
 ---
 
@@ -43,9 +54,8 @@ System.out.println(p1.getNama());
 ---
 
 ## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
-)
+<img width="890" height="368" alt="Cuplikan layar 2025-10-27 174458" src="https://github.com/user-attachments/assets/525a310f-e7af-4897-9359-d7764686c189" />
+
 ---
 
 ## Analisis
@@ -61,13 +71,40 @@ System.out.println(p1.getNama());
 Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
 
 ---
+## Checklist Keberhasilan
+- [x] Overloading `tambahStok` berhasil.  
+- [x] Overriding `getInfo` pada subclass berjalan.  
+- [x] Dynamic binding berjalan melalui array produk.  
+- [x] Output menampilkan identitas mahasiswa.  
+- [x] Screenshot & laporan disertakan.
 
-## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+---
+Keren banget, ini bagian **Quiz** buat laporan praktikum Week 4 ya 🎓
+Biar lengkap, berikut versi **jawaban akademik** yang bisa langsung kamu pakai atau sesuaikan gaya bahasanya:
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+---
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+## 🧠 **Quiz – Praktikum Week 4: Polymorphism**
+
+1. **Apa perbedaan overloading dan overriding?**
+   **Jawaban:**
+
+   * **Overloading** terjadi ketika dua atau lebih method memiliki **nama yang sama**, tetapi **parameter berbeda** (baik dari jumlah, tipe, atau urutannya). Overloading ditentukan **pada saat kompilasi (compile time)**.
+   * **Overriding** terjadi ketika subclass membuat ulang method dari superclass dengan **nama, parameter, dan tipe kembalian yang sama**, tetapi dengan **implementasi berbeda**. Overriding ditentukan **pada saat runtime (run time)**.
+
+---
+
+2. **Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?**
+   **Jawaban:**
+   Dalam **dynamic binding**, Java menentukan method yang dipanggil **berdasarkan objek aktual yang direferensikan** oleh variabel pada **saat program berjalan** (runtime), bukan berdasarkan tipe variabel referensinya.
+   Dengan demikian, jika referensi bertipe superclass menunjuk ke objek subclass, method milik subclass yang dioverride akan dijalankan.
+
+---
+3. *Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.*
+   **Jawaban:**
+   Contoh lain adalah sistem POS (Point of Sale) di **restoran**.
+
+   * Superclass: `MenuItem` dengan method `getHarga()`.
+   * Subclass: `Makanan`, `Minuman`, dan `Dessert`, masing-masing mengoverride `getHarga()` sesuai kebijakan pajak atau diskon.
+   * Dengan polymorphism, sistem dapat memproses seluruh item dalam array `MenuItem[]` tanpa peduli jenisnya, namun tetap memanggil method yang sesuai dengan objek aktualnya.
+---
