@@ -43,14 +43,86 @@ Polymorphism berarti “banyak bentuk” dan memungkinkan objek yang berbeda mer
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
 
+### Produk.java (Overloading & getInfo default)
 ```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
+package com.upb.agripos.model;
+
+public class Produk {
+    private String kode;
+    private String nama;
+    private double harga;
+    private int stok;
+
+    public Produk(String kode, String nama, double harga, int stok) {
+        this.kode = kode;
+        this.nama = nama;
+        this.harga = harga;
+        this.stok = stok;
+    }
+
+    public void tambahStok(int jumlah) {
+        this.stok += jumlah;
+    }
+
+    public void tambahStok(double jumlah) {
+        this.stok += (int) jumlah;
+    }
+
+    public String getInfo() {
+        return "Produk: " + nama + " (Kode: " + kode + ")";
+    }
+}
 ```
-)
+### pupuk.java (Overriding)
+```java
+package com.upb.agripos.model;
+
+public class Pupuk extends Produk {
+    private String jenis;
+
+    public Pupuk(String kode, String nama, double harga, int stok, String jenis) {
+        super(kode, nama, harga, stok);
+        this.jenis = jenis;
+    }
+
+    @Override
+    public String getInfo() {
+        return "Pupuk: " + super.getInfo() + ", jenis: " + jenis;
+    }
+}
+
+```
+
+### MainPolymorphism.java
+```java
+package com.upb.agripos;
+
+import com.upb.agripos.Util.CreditBy;
+import com.upb.agripos.model.AlatPertanian;
+import com.upb.agripos.model.Benih;
+import com.upb.agripos.model.BibitBuah;
+import com.upb.agripos.model.Produk;
+import com.upb.agripos.model.Pupuk;
+
+public class MainPolymorphism {
+    public static void main(String[] args) {
+        Produk[] daftarProduk = {
+            new Benih("BNH-001", "Benih Padi IR64", 25000, 100, "IR64"),
+            new AlatPertanian("ALT-501", "Cangkul Baja", 90000, 15, "Baja"),
+            new Pupuk ("PPK-101", "Pupuk Urea", 350000, 40, "Urea"),
+            new BibitBuah("BBH-401", "Bibit Mangga Harum Manis", 45000, 30, "Mangga")
+
+        };
+
+        for (Produk p : daftarProduk) {
+            System.out.println(p.getInfo()); // Dynamic Binding
+        }
+
+        CreditBy.print("<240202830>", "<Bagus Alldiansyah>");
+    }
+}
+```
 ---
 
 ## Hasil Eksekusi
@@ -58,17 +130,21 @@ System.out.println(p1.getNama());
 
 ---
 
-## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
+## **Analisis**
+
+Program membuat beberapa objek turunan dari `Produk`, seperti `AlatPertanian`, `Pupuk`, dan `ObatTanaman`.
+Setiap subclass **mengoverride** method `getInfo()` dan melakukan **overloading** pada `tambahStok()`.
+Semua objek disimpan dalam array `Produk[]`, lalu Java menjalankan **dynamic binding** untuk memanggil method sesuai tipe objek saat runtime.
+
+Berbeda dengan minggu sebelumnya yang fokus pada **inheritance**, minggu ini menekankan **polymorphism**, sehingga kode lebih fleksibel.
+Kendala utama berupa kesalahan struktur package dan file hilang diselesaikan dengan memperbaiki path dan penamaan file.
+
 ---
 
-## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+## **Kesimpulan**
+
+Penerapan polymorphism membuat program lebih **dinamis, efisien, dan mudah dikembangkan**.
+Melalui overloading dan overriding, objek dapat berperilaku berbeda meski diakses melalui referensi yang sama.
 
 ---
 ## Checklist Keberhasilan
@@ -77,10 +153,6 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 - [x] Dynamic binding berjalan melalui array produk.  
 - [x] Output menampilkan identitas mahasiswa.  
 - [x] Screenshot & laporan disertakan.
-
----
-Keren banget, ini bagian **Quiz** buat laporan praktikum Week 4 ya 🎓
-Biar lengkap, berikut versi **jawaban akademik** yang bisa langsung kamu pakai atau sesuaikan gaya bahasanya:
 
 ---
 
@@ -100,7 +172,7 @@ Biar lengkap, berikut versi **jawaban akademik** yang bisa langsung kamu pakai a
    Dengan demikian, jika referensi bertipe superclass menunjuk ke objek subclass, method milik subclass yang dioverride akan dijalankan.
 
 ---
-3. *Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.*
+3. **Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.**
    **Jawaban:**
    Contoh lain adalah sistem POS (Point of Sale) di **restoran**.
 
