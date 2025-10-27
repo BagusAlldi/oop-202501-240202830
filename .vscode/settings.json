@@ -1,3 +1,7 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "praktikum/week4-polymorphism/src/main/java",
+        "praktikum/week4-polymorphism/src/main"
+    ]
 }
