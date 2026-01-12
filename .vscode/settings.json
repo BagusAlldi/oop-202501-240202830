@@ -1,7 +1,10 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
-        "praktikum/week4-polymorphism/src/main/java",
-        "praktikum/week4-polymorphism/src/main"
-    ]
+        "praktikum/week9-exception-handling/src/main/java",
+        "praktikum/week7-koleksi-keranjang/src/main/java",
+        "praktikum/week5-abstraction-interface/src",
+        "praktikum/week11-dao-database/demo/src/main/java/com/upb/agripos"
+    ],
+    "java.project.referencedLibraries": []
 }
