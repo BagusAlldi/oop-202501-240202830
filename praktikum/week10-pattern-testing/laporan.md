@@ -1,7 +1,3 @@
-Oke, berarti **sekarang kamu sedang di Minggu 10 (Bab 10 – Design Pattern & Unit Testing)** sesuai file yang kamu upload `10_bab10_pattern_testing.md` .
-Kalau polanya sama seperti Minggu 7 dan 9, kita tinggal ubah materi Bab 10 itu menjadi **laporan praktikum Week 10 versi kamu (Agri-POS)**.
-
-Ini versi **Markdown siap pakai** untuk **`laporan_week10.md`** ⬇️
 
 ---
 
@@ -204,7 +200,7 @@ public class ProductTest {
 
 ## ▶️ Hasil Eksekusi
 
-> 📌 Lampirkan screenshot hasil JUnit (`screenshots/junit_result.png`) yang menunjukkan test berjalan tanpa error.
+
 
 ---
 
@@ -245,4 +241,3 @@ Aplikasi menjadi lebih siap dikembangkan dalam skala besar.
 
 ---
 
-Kalau mau, berikutnya saya bisa bantu **sinkronkan Minggu 7, 9, dan 10 jadi satu paket laporan Agri-POS yang utuh** buat dikumpulkan atau dijadikan repo GitHub 📦🚀
