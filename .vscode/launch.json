@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AppJavaFX",
+            "request": "launch",
+            "mainClass": "com.upb.agripos.AppJavaFX",
+            "projectName": "week14-integrasi-individu"
+        },
+        {
+            "type": "java",
+            "name": "AppJavaFX",
+            "request": "launch",
+            "mainClass": "com.upb.agripos.AppJavaFX",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "AppJavaFX",
+            "request": "launch",
+            "mainClass": "com.example.AppJavaFX",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "AppMVC",
+            "request": "launch",
+            "mainClass": "com.upb.agripos.AppMVC",
+            "projectName": "week10-pattern-testing"
+        },
+        {
+            "type": "java",
+            "name": "MainExceptionDemo",
+            "request": "launch",
+            "mainClass": "com.upb.agripos.MainExceptionDemo",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "MainDAOTest",
             "request": "launch",
             "mainClass": "com.upb.agripos.MainDAOTest",

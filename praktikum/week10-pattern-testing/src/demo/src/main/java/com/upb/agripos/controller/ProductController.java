@@ -4,16 +4,20 @@ import com.upb.agripos.model.Product;
 import com.upb.agripos.view.ConsoleView;
 
 public class ProductController {
-    private final Product model;
-    private final ConsoleView view;
+    private Product model;
+    private ConsoleView view;
 
     public ProductController(Product model, ConsoleView view) {
         this.model = model;
         this.view = view;
     }
 
-    public void showProduct() {
-        // Mengambil data dari model dan mengirimkannya ke view
-        view.showMessage("Produk: " + model.getCode() + " - " + model.getName());
+    public void updateView() {
+        view.displayProductDetails(model);
+    }
+
+    // Contoh manipulasi data lewat controller
+    public void setProductPrice(double newPrice) {
+        model.setHarga(newPrice);
     }
 }
