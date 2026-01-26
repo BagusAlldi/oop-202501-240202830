@@ -7,10 +7,12 @@ com\upb\agripos\payment\PaymentFactory.class
 com\upb\agripos\product\ProductService.class
 com\upb\agripos\auth\AuthService.class
 com\upb\agripos\product\JdbcProductRepository.class
+com\upb\agripos\controller\PosController$1$1.class
 com\upb\agripos\transaction\CartItem.class
 com\upb\agripos\controller\LoginController.class
 com\upb\agripos\payment\PaymentService.class
 com\upb\agripos\payment\EWalletPayment.class
+com\upb\agripos\controller\PosController$1.class
 com\upb\agripos\controller\PosController.class
 com\upb\agripos\controller\AdminController.class
 com\upb\agripos\payment\PaymentGateway.class
