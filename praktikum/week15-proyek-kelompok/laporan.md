@@ -1,4 +1,4 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
+# Laporan Praktikum Minggu 15
 Topik: Final Project - Agri-POS Integrated System (Integrasi Database & UI Modern )
 
 ## Identitas
